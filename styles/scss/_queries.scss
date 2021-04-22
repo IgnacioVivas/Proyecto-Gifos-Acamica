@@ -1,0 +1,294 @@
+
+/* ------------------------------- *
+ * -------- Tablet Styles -------- *
+ * ------------------------------- */
+@media (min-width: 768px) {
+
+    /*Erase Hamburguer Menu*/
+    .burger {
+        display: none;
+    }
+
+    /* Navigation Bar Styles */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: $p-1 $p-3;
+    }
+
+    /* Logo Size */
+    .logo {
+        width: $logo-desk-size;
+    }
+
+    /*Horizontal Menu*/
+    .menu {
+        @include flexbox(row, space-between);
+        visibility: visible;
+        background-color: transparent;
+        position: relative;
+        top: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+
+        &__item {
+            padding: 0;
+            margin: 0 1rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                color: $main-color;
+                text-transform: uppercase;
+            }
+
+        }
+
+        &__line {
+            display: none;
+        }
+
+    }
+
+    /* Dark Theme in Horizontal Menu */
+    .dark {
+        .menu {
+            background-color: transparent;
+        }
+    }
+
+    /* Erase line breaks */
+    .break {
+        display: none;
+    }
+
+    /* Hero Section */
+
+    /* Size of paragraph in Hero */
+    .hero {
+        padding: $p-1;
+
+        .main_title {
+            max-width: $text-size;
+            margin: $margin-center;
+        }
+    }
+
+    /* Size of welcome image and search bar */
+    .welcome {
+        width: $first-img-desk-size;
+        margin-top: $m-15;
+    }
+
+    .search {
+        width: $text-size;
+        margin: $margin-center;
+    }
+
+    /* Favorites and My GIFOS Sections */
+
+    /* Amount of columns in gif results */
+    .grid {
+        grid-template-columns: repeat(auto-fit, 20%);
+        margin-top: 2.25rem;
+    }
+
+    /* Size of Buttons */
+    .btn {
+        display: inline-block;
+        padding: $p-1 $p-2;
+        padding: $m-5 auto;
+        width: auto;
+    }
+
+    .trending__topics {
+        width: 25.13rem;
+    }
+
+    /* Size of modal gifo */
+    .modal {
+        margin: auto;
+    }
+}
+
+/* ----- End of Tablet Styles ---- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------- Desktop Styles -------- *
+ * ------------------------------- */
+@media (min-width: 900px) {
+
+    /* Text Styles */
+    .main_title {
+        @include titles(2.19rem, 3.13rem, 700);
+    }
+    
+    .section_title {
+        @include titles(1.56rem, 1.88rem, 700);
+    }
+    
+    .trending__title {
+        @include titles(1.13rem, 1.56rem, 700);
+    }
+    
+    .text {
+        @include texts(1.13rem, 1.44rem);
+    }
+    
+    .trending__links{
+        @include titles(1rem, 1.56rem, 500);
+    } 
+    
+    .small_text {
+        @include texts(0.88rem, 1.25rem);
+    }
+
+    /* Buttons Styles */
+    .btn,
+    .button {
+
+        &:hover {
+            background-color: $main-color;
+            color: $light-color;
+        }
+
+    }
+
+    /* Navbar Styles */
+
+    /* ------------------------------- *
+    *  Changes when doing scroll down  *
+    *  ------------------------------- */
+    html:not([data-scroll='0']) {
+
+        /* Shadow at the bottom when doing scroll */
+        .navbar {
+            box-shadow: 0 2px 4px 1px rgba(156,175,195,0.55);
+            transition: opacity 0.5s 0.5s ease;
+        }
+    
+    }
+
+    /* End of Changes when scrolling down */
+    /*                                    */
+    
+    /* Menu Styles */
+    .menu {
+        padding: 0;
+        background-color: inherit;
+    
+        &__item {
+
+            &:hover {
+                border-bottom: 2px solid $secondary-color;
+            }
+
+            &:last-child {
+                margin-right: 0;
+                display: block;
+
+                &:hover {
+                    border-bottom: none;
+                }
+                
+            }
+
+            a {
+                &:active {
+                    color: $grey-btn-color;
+                }
+            }
+        }
+    }
+
+    /* Trending Slider Styles */
+    .trendslider {
+        width: 80%;
+        height: 17.19rem;
+
+        &__slider {
+            width: 21.6rem * 6;
+            height: 17.19rem;
+        }
+
+        .gifo {
+            width: 20.6rem;
+            height: 100%;
+
+            //Hover of Gifos in Trendslider
+            &:hover {
+                .gifo__hover {
+                    opacity: 0.6;
+                }
+            }
+
+            img {
+                width: 20.6rem;
+                height: 100%;
+            }
+        }
+    }
+
+//Buttons of trending slider
+.prev,
+.next {
+    display: block;
+}
+
+//Hover of Gifos in Sections
+.gifo {
+    &:hover {
+        .gifo__hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+     /* Footer Section Styles */
+    .footer {
+        @include flexbox(row, space-between);
+        padding: $p-3 $p-9;
+    } 
+
+
+    /* Social Icons Styles */
+    .social {
+        margin: 0;
+        @include flexbox(row, space-between);
+        width: 20%;
+        padding: 0;
+
+        &__icons {
+            width: 50%;
+            margin: 0;
+
+            i {
+            margin: 0 $m-05;
+
+                &:hover {
+                color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+
+/*                                 */
+
+@media (min-width: 1100px) {
+    
+    /* Navbar Styles */
+    .navbar {
+        padding: $p-15 $p-9;
+    }
+
+}
+ 
+ /* ---- End of Desktop Styles ---- */
+ /*                                 */

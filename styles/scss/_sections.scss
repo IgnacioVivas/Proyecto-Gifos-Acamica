@@ -1,0 +1,57 @@
+/* --------------------------------------------------- *
+ * ------ My Gifos / Favorites /Results Section ------ *
+ * --------------------------------------------------- */
+/* Section´s General Layout */
+.favorites,
+.mygifos,
+.create,
+.results {
+    padding: $p-1 $p-15;
+    text-align: center;
+}
+
+/* Results´s Line on Top */
+.section_line {
+    width: 25%;
+    height: 0.01rem;
+    margin: $m-28 auto;
+    background-color: $grey-btn-color;
+}
+
+/* Section´s Icon Styles */
+.title_icon {
+    width: 1.44rem;
+    display: block;
+    margin: $m-05 auto;
+}
+
+/* Section´s GIFOS Layout */
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 46%);
+    justify-content: center;
+    gap: $p-1;
+    margin-top: $m-28;
+
+    /* Setup for later styles in gifohover */
+    .gifo {
+        position: relative;
+    }
+
+}
+
+/* Message: No Searching Results */
+.error_msg {
+    width: 80%;
+    text-align: center;
+    margin: 5% auto;
+
+    img {
+        width: 9.38rem;
+        margin-bottom: $m-2;
+    }
+}
+
+ /* -- End of My Gifos / Favorites / Results Section -- */
+ /*                                                     */

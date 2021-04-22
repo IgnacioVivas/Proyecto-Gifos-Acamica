@@ -1,0 +1,86 @@
+/* ------------------ Modal Gifo ---------------- */
+
+//Modal general container
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1000;
+    padding: 15vh $p-2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.90);
+    color: $dark-color;
+
+    //Modal sub container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        padding: 5rem 0;
+    }
+
+    //Gifo image
+    &__img {
+        width: 100%;
+        margin: $m-1 auto;
+    }
+
+    //Gifo text and buttons container
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    //Gifo text
+    &__text {
+        width: 70%;
+    }
+
+    //Gifo user
+    &__user {
+        @include texts(0.94rem, 1.13rem);
+    }
+
+    //Gifo title
+    &__title {
+        @include titles(1rem, 1.56rem, 700);
+    }
+
+    //Favorite and Download Buttons
+    .fav_btn,
+    .download_btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    .fav_btn {
+        margin-right: $m-05;
+    }
+
+    .download_btn {
+        margin-left: $m-05;
+    }
+
+}
+
+//Close modal button
+.close_modal_btn {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    //Cross icon
+    i {
+        color: $main-color;
+        font-size: 1.5rem;
+    }
+}
+
+/* --------------- End of Modal Gifo ------------- */
